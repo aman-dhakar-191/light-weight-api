@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import { apiRequest } from '../almostnode/container';
 import styles from './DataBrowser.module.css';
 
@@ -8,24 +8,31 @@ const ROLE_COLOR = {
   user: { bg: '#0c1a2e', color: '#7dd3fc' },
 };
 
+const initialDataState = { data: null, loading: true, error: null };
+
+function dataReducer(state, action) {
+  switch (action.type) {
+    case 'loading': return { data: null, loading: true, error: null };
+    case 'success': return { data: action.payload, loading: false, error: null };
+    case 'error':   return { data: null, loading: false, error: action.payload };
+    default:        return state;
+  }
+}
+
 function useAlmostNodeData(path) {
-  const [data,    setData]    = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error,   setError]   = useState(null);
+  const [state, dispatch] = useReducer(dataReducer, initialDataState);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+    dispatch({ type: 'loading' });
     apiRequest(path)
       .then(res => {
         if (!res.body.success) throw new Error(res.body.message);
-        setData(res.body);
+        dispatch({ type: 'success', payload: res.body });
       })
-      .catch(err => setError(err.message))
-      .finally(() => setLoading(false));
+      .catch(err => dispatch({ type: 'error', payload: err.message }));
   }, [path]);
 
-  return { data, loading, error };
+  return state;
 }
 
 function Spinner() {
