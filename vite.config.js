@@ -19,7 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // Allow importing JSON data files from the project root /data folder
-      '@data': path.resolve(__dirname, '../data'),
+      '@data': path.resolve(__dirname, 'data'),
       // Provide browser shims for Node.js built-ins used by almostnode's deps
       'node:zlib': path.resolve(__dirname, 'src/shims/zlib.js'),
       'zlib': path.resolve(__dirname, 'src/shims/zlib.js'),
