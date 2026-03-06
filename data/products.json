@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro 15",
+    "category": "Electronics",
+    "price": 1299.99,
+    "stock": 42,
+    "description": "High-performance laptop with 15-inch display, 16GB RAM, and 512GB SSD."
+  },
+  {
+    "id": 2,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 199.99,
+    "stock": 120,
+    "description": "Noise-cancelling wireless headphones with 30-hour battery life."
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 89.99,
+    "stock": 75,
+    "description": "Compact TKL mechanical keyboard with RGB backlighting."
+  },
+  {
+    "id": 4,
+    "name": "USB-C Hub",
+    "category": "Accessories",
+    "price": 49.99,
+    "stock": 200,
+    "description": "7-in-1 USB-C hub with HDMI, SD card, and USB 3.0 ports."
+  },
+  {
+    "id": 5,
+    "name": "4K Monitor",
+    "category": "Electronics",
+    "price": 549.99,
+    "stock": 30,
+    "description": "27-inch 4K IPS monitor with 144Hz refresh rate."
+  },
+  {
+    "id": 6,
+    "name": "Ergonomic Mouse",
+    "category": "Accessories",
+    "price": 59.99,
+    "stock": 90,
+    "description": "Vertical ergonomic mouse to reduce wrist strain."
+  }
+]
