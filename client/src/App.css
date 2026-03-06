@@ -1,0 +1,104 @@
+/* App shell */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Header */
+.app-header {
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+  padding: 0 1.5rem;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-brand-icon {
+  font-size: 1.3rem;
+}
+
+.header-brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #818cf8;
+  letter-spacing: -0.02em;
+}
+
+.header-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #312e81;
+  border: 1px solid #4338ca;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+.header-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #34d399;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Tab nav */
+.app-tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0 1.5rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.app-tab {
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.app-tab:hover { color: #94a3b8; }
+
+.app-tab.active {
+  color: #818cf8;
+  border-bottom-color: #818cf8;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+

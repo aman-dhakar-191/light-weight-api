@@ -1,0 +1,11 @@
+{
+  "name": "light-weight-api",
+  "version": "1.0.0",
+  "description": "A React app with a Node.js API running in the browser via AlmostNode.",
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "preview": "cd client && npm run preview",
+    "install:client": "cd client && npm install"
+  }
+}
